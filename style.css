@@ -82,6 +82,7 @@ header{
 }
 .service-head{
     text-decoration: underline;
+    text-decoration-thickness: 3px;
     margin-bottom: 30px;
     text-align: center;
 }
@@ -99,8 +100,9 @@ header{
     margin: 10px 0px;
 }
 .testimonial{
-    background: url("banner.jpg");
+    background: url("testimonial.webp") center center;
     background-size: cover;
+    background-repeat: no-repeat;
     color: white;
 }
 .remark{
