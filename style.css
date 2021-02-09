@@ -16,11 +16,19 @@ html{
     display: block;
 }
 header{
-    background: #3490db;
+    background: #30336b;
     color: white; 
     position: sticky;
     left: 0;
     top: 0;
+}
+.transparent{
+    background: rgb(8, 8, 8, 0.6);
+    color: white; 
+    position: sticky;
+    left: 0;
+    top: 0;
+    color: yellow;
 }
 .logo{
     display: inline-block;
@@ -40,21 +48,22 @@ header{
     display:block;
     padding: 15px 10px;
     text-decoration: none;
-    color: white;
+    color: #34e7e4;
     text-transform: uppercase;
+    font-weight: bold;
 }
 .menu li a:hover{
-    background: #2980b9;
+    background: #130f40;
 }
 .banner{
     background: url('banner.webp');
     background-size:cover;
     background-repeat: no-repeat;
-    padding: 200px 0px;
+    padding: 250px 0px;
     text-align: center;
 }
 .banner-title{
-    color: greenyellow;
+    color: cyan;
 }
 .banner-title h2{
     background: rgba(10, 10, 10,0.3);
