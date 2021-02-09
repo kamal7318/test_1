@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"/>
     <title>Document</title>
 </head>
-<body onscroll="change()">
+<body>
     <header id="header">
       <div class="fixed clearfix">
         <h1 class="logo wow zoomInLeft">Kamal's</h1>
@@ -156,6 +156,15 @@
             function up(){
              window.scrollTo(0,0);
          }
+         window.onscroll = function() {myFunction()};
+
+      function myFunction() {
+  if (document.body.scrollTop > 350 || document.documentElement.scrollTop > 350) {
+    document.getElementById("header").className = "transparent";
+  } else {
+    document.getElementById("header").className = "";
+  }
+}
      </script>
 </body>
 </html>
