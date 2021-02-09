@@ -32,8 +32,12 @@ header{
 }
 .logo{
     display: inline-block;
-    font-size: 25px;
-    margin-top: 10px;
+}
+.logo img{
+    height: 44px;
+    width: 65px;
+    margin-top: 0px;
+    cursor: pointer;
 }
 .menu{
     list-style: none;
@@ -54,6 +58,30 @@ header{
 }
 .menu li a:hover{
     background: #130f40;
+}
+#click{
+    display: none;
+}
+.toggle-icon{
+    height: 28px;
+    width: 30px;
+    background: #F79B10;
+    position: fixed;
+    top: 12px;
+    right: 30px;
+    display: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.spinner{
+    height: 3px;
+    width: 75%;
+    margin: auto;
+    background: #30336b;
+    margin-top: 5px;
+} 
+.mobile-menu{
+    display: none;
 }
 .banner{
     background: url('banner.webp');
@@ -210,16 +238,6 @@ header{
     }
 }
 @media(max-width:992px){
-    .menu{
-        text-align: center;
-        float: none;
-    }
-    .logo{
-        text-align: center;
-        display: block;
-        float: none;
-        margin-top: 0px;
-    }
     .fixed{
         max-width: 96%;
         margin: auto;
@@ -233,13 +251,44 @@ header{
     .service{
         padding: 30px 0px;
     }
-    .logo{
-        display: block;
-        text-align: center;
+    .toggle-icon{
+        display: inline-block;
     }
     .menu{
+        display: none;
+    }
+    .mobile-menu{
+        display: none;
+        position: fixed;
+        top: 51.5px;
+        left: 20px;
+        width: 90%;
+        height: auto;
+        background: #30336b;
+        transform: scaleY(0);
+    }
+    .mobile-menu ul li{
         display: block;
-        text-align: center;
+        border-top: 1px solid white;
+    }
+    .mobile-menu ul li:first-child{
+        border-top: 3px solid #34e7e4;
+    }
+    .mobile-menu ul li a{
+        font-size: 16px;
+        display: block;   
+        font-weight: 500;
+        padding: 10px 5px;
+        text-decoration: none;
+        color: #34e7e4;
+    }
+    .mobile-menu ul li a:hover{
+        background: #130f40;
+        transform: scaleY(1);
+    }
+
+    #click:checked ~ .mobile-menu{
+        display: block;
     }
     .service-box{
         width: 100%;
