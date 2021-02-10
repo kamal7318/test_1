@@ -84,14 +84,14 @@ header{
     display: none;
 }
 .banner{
-    background: url('banner.webp');
+    background: url('banner.webp') center center;
     background-size:cover;
     background-repeat: no-repeat;
     padding: 250px 0px;
     text-align: center;
 }
 .banner-title{
-    color: cyan;
+    color: rgb(7, 252, 150);
 }
 .banner-title h2{
     background: rgba(10, 10, 10,0.3);
@@ -111,7 +111,7 @@ header{
 .service-head{
     text-decoration: underline;
     text-decoration-thickness: 3px;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     text-align: center;
 }
 .service-box{
@@ -126,6 +126,100 @@ header{
 }
 .service-box h3{
     margin: 10px 0px;
+}
+,.service-box p{
+    text-align: justify;
+}
+.progress{
+    padding: 50px 0px;
+    background: rgb(235, 243, 243);
+}
+.progress h3{
+    margin-bottom: 10px;
+    margin-left:10%;
+    color: #3490db;
+}
+.progress .shadow{
+    height: 20px;
+    width: 80%;
+    border-radius: 12px;
+    margin: auto;
+    background: white;
+    box-shadow: 0px 0px 15px purple;
+    margin-bottom: 30px;
+}
+.shadow .main1{
+    height: 20px;
+    width:95%;
+    border-radius: 12px;
+    box-sizing: border-box;
+    background: rgb(97, 1, 97);
+    text-align: right;
+    color: #3490db;
+    animation: main1 2s;
+}
+.shadow .main2{
+    height: 20px;
+    width:90%;
+    border-radius: 12px;
+    box-sizing: border-box;
+    background: rgb(97, 1, 97);
+    text-align: right;
+    color: cyan;
+    animation: main2 2s;
+}
+.shadow .main3{
+    height: 20px;
+    width:70%;
+    border-radius: 12px;
+    box-sizing: border-box;
+    background: rgb(97, 1, 97);
+    text-align: right;
+    color: cyan;
+    animation: main3 2s;
+}
+.shadow .main4{
+    height: 20px;
+    width:80%;
+    border-radius: 12px;
+    box-sizing: border-box;
+    background: rgb(97, 1, 97);
+    text-align: right;
+    color: cyan;
+    animation: main4 2s;
+}
+
+@keyframes main1 {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 95%;
+    }
+}
+@keyframes main2 {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 90%;
+    }
+}
+@keyframes main3 {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 70%;
+    }
+}
+@keyframes main4 {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 80%;
+    }
 }
 .testimonial{
     background: url("testimonial.webp") center center;
@@ -146,31 +240,93 @@ header{
     border-radius: 50%;
     margin: 15px 0px;
 }
+.counter-up{
+    width: 100%;
+    background: rgba(247, 65, 34, 0.2);
+    padding: 100px 0px;
+}
+.n-box{
+    display: inline-block;
+    width: 25%;
+    color: tomato;
+    font-weight: bold;
+    text-align: center;
+    font-size: 30px;
+}
+.n-box .fas{
+    color: rebeccapurple;
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+.n-box p{
+    font-size: 25px;
+    color: royalblue;
+}
+.form-news{
+    padding: 50px 0px;
+}
 .form-news h3{
     text-align: center;
+    color: rgb(2, 110, 110);
 }
 .form{
     float: left;
-    width: 50%;
-    margin-left: 30px;
+    width: 48%;
+    padding-left: 20px;
+    color: rgb(59, 2, 112);
 }
 .input-width{
-    width: 70%;
+    width: 80%;
     height: 25px;
+    text-indent: 8px;
+    font-size: 15px;
+    border-radius: 5px;
+    display: block;
+}
+label{
+    font-size: 18px;
+}
+.submit{
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    background: cyan;
+    color: blue;
+}
+.reset{
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    background: red;
+    color: white;
 }
 .news{
-    width: 45%;
+    width: 48%;
     float: right;
+    padding-left: 10px;
 }
-.news li{
-    list-style: none;
-    margin: 0;
-    background: rgb(247, 244, 244,0.8);
-    margin-bottom: 5px;
-    padding: 10px 8px;
+.recent-news{
+    width:100%;
+    display: inline-block;
 }
-.news li a{
-   text-decoration: none;
+.recent-news h4{
+    margin: 8px 0px;
+}
+.recent-news p{
+    margin: 8px 0px;
+}
+.recent-news a{
+    text-decoration: none;
+    padding: 5px 8px;
+    background: tomato;
+    border-radius: 8px;
+    margin-top: 5px;
 }
 .footer-bar{
     background: rgb(63, 62, 62);
@@ -246,6 +402,9 @@ header{
     .service-box{
         padding: 0px 3px;
     }
+    .form{
+        padding-left: 10px;
+    }
 }
 @media(max-width:768px){
     .service{
@@ -305,8 +464,19 @@ header{
         margin-left: 0px;
         margin-top: 40px;
     }
+    .counter-up{
+        padding: 40px 0px;
+    }
+    .n-box{
+        width: 50%;
+        margin-bottom: 50px;
+        display:inline-block;
+    }
+    .n-box .fas{
+        margin-bottom: 5px;
+    }
     .fixed{
-        max-width: 96%;
+        max-width: 95%;
         margin: auto;
         display: block;
     }
@@ -318,7 +488,12 @@ header{
     .news{
         width: 100%;
         float: none;
-        text-align: center;
+    }
+    .recent-news p{
+        width: 90%;
+        margin: auto;
+        text-align: justify;
+        margin: 15px 0px;
     }
     .about{
         width: 100%;
@@ -341,6 +516,7 @@ header{
         width: 100%;
         float: none;
         text-align: center;
+        padding-bottom: 10px;
     }
     .social-icons .fab{
         margin-top: 5px;
@@ -353,10 +529,22 @@ header{
         max-width: 98%;
         margin: auto;
     }
+    .banner{
+        padding: 150px 0px;
+    }
+    .banner-title h2{
+        font-size: 20px;
+    }
+    .banner-title p{
+        font-size: 14px;
+    }
     .menu li a{
         font-size: 13px;
         padding: 3px;
         margin: 5px 0px;
+    }
+    .n-box{
+        width: 100%;
     }
     .up{
         height: 30px;
