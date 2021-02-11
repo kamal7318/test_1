@@ -52,7 +52,7 @@ header{
     display:block;
     padding: 15px 10px;
     text-decoration: none;
-    color: #34e7e4;
+    color: rgb(233, 79, 52);
     text-transform: uppercase;
     font-weight: bold;
 }
@@ -63,9 +63,8 @@ header{
     display: none;
 }
 .toggle-icon{
-    height: 28px;
+    height: 22px;
     width: 30px;
-    background: #F79B10;
     position: fixed;
     top: 12px;
     right: 30px;
@@ -77,8 +76,9 @@ header{
     height: 3px;
     width: 75%;
     margin: auto;
-    background: #30336b;
+    background: #F79B10;
     margin-top: 5px;
+    transition: all 0.3s;
 } 
 .mobile-menu{
     display: none;
@@ -109,10 +109,27 @@ header{
     padding: 50px 0px;
 }
 .service-head{
-    text-decoration: underline;
-    text-decoration-thickness: 3px;
     margin-bottom: 50px;
     text-align: center;
+    color: #30336b;
+}
+.service-head::before{
+    content: " ";
+    height: 3px;
+    width: 150px;
+    margin: auto;
+    display: block;
+    background: #30336b;
+    transform: translateY(40px);
+}
+.service-head::after{
+    content: " ";
+    height: 8px;
+    width: 30px;
+    margin: auto;
+    display: block;
+    background: #30336b;
+    transform: translateY(4px);
 }
 .service-box{
     float: left;
@@ -227,6 +244,9 @@ header{
     background-repeat: no-repeat;
     color: white;
 }
+.testimonial .service-head{
+    color: white;
+}
 .remark{
     float: left;
     width: 45%;
@@ -242,8 +262,8 @@ header{
 }
 .counter-up{
     width: 100%;
-    background:#EBF3F3;
-    padding: 100px 0px;
+    background: #EBF3F3;
+    padding: 50px 0px;
 }
 .n-box{
     display: inline-block;
@@ -262,71 +282,115 @@ header{
     font-size: 25px;
     color: royalblue;
 }
-.form-news{
-    padding: 50px 0px;
-}
-.form-news h3{
-    text-align: center;
-    color: rgb(2, 110, 110);
-}
 .form{
-    float: left;
-    width: 48%;
-    padding-left: 20px;
+    padding: 50px 0px;
     color: rgb(59, 2, 112);
+}
+
+.form1{
+    display: inline-block;
+    float: left;
+    width: 50%;
+}
+.form2{
+    display: inline-block;
+    width: 50%;
+    float: right;
 }
 .input-width{
     width: 80%;
-    height: 25px;
+    height: 20px;
     text-indent: 8px;
     font-size: 15px;
-    border-radius: 5px;
     display: block;
+    border: none;
+    background: transparent;
+    border-bottom: 3px solid white;
+}
+.input-width:focus, .input-width:active{
+    border: none;
+    outline: none;
+    border-bottom: 3px solid rgb(59, 2, 112);
+    height: 25px;
+}
+textarea{
+    width: 80%;
+    height: 100px;
+    text-indent: 8px;
+    font-size: 15px;
+    display: block;
+    margin-bottom: 20px;
 }
 label{
     font-size: 18px;
+    display: inline-block;
+    padding-bottom: 8px;
+    font-weight: bold;
 }
 .submit{
-    width: 100px;
-    height: 30px;
+    width: 80px;
+    height: auto;
+    padding: 5px 0px;
+    text-align: center;
+    display: inline-block;
     border-radius: 10px;
     border: none;
     outline: none;
     font-size: 18px;
-    background: cyan;
-    color: blue;
+    background: green;
+    color: white;
+    cursor: pointer;
+}
+.submit:hover{
+    background: darkgreen;
 }
 .reset{
-    width: 100px;
-    height: 30px;
+    width: 80px;
+    height: auto;
+    padding: 5px 0px;
+    text-align: center;
     border-radius: 10px;
-    border: none;
-    outline: none;
     font-size: 18px;
     background: red;
     color: white;
+    display: inline-block;
+    cursor: pointer;
+    margin-left: 15px;
+}
+.reset:hover{
+    background: darkred;
 }
 .news{
-    width: 48%;
-    float: right;
-    padding-left: 10px;
+  padding: 50px 0px;
 }
 .recent-news{
-    width:100%;
+    width:50%;
     display: inline-block;
+    float: left;
+}
+.recent-news img{
+    width: 80%;
+    height: 200px;
 }
 .recent-news h4{
-    margin: 8px 0px;
+    margin: 10px 0px;
+    color: rgb(253, 66, 33);
+}
+.post-date .fa{
+    color: #3490db;
+}
+.post-date i{
+    padding-right: 8px;
 }
 .recent-news p{
     margin: 8px 0px;
+    margin-bottom: 20px;
 }
 .recent-news a{
     text-decoration: none;
-    padding: 5px 8px;
+    padding: 8px 12px;
     background: tomato;
     border-radius: 8px;
-    margin-top: 5px;
 }
 .footer-bar{
     background: rgb(63, 62, 62);
@@ -394,18 +458,9 @@ label{
     }
 }
 @media(max-width:992px){
-    .fixed{
-        max-width: 96%;
-        margin: auto;
-        display: block;
-    }
     .service-box{
         padding: 0px 3px;
     }
-    .form{
-        padding-left: 10px;
-    }
-}
 @media(max-width:768px){
     .service{
         padding: 30px 0px;
@@ -445,9 +500,19 @@ label{
         background: #130f40;
         transform: scaleY(1);
     }
-
     #click:checked ~ .mobile-menu{
         display: block;
+    }
+    #click:checked ~ .toggle-icon > .sp-mid{
+        margin-right: -999px;
+    }
+    #click:checked ~ .toggle-icon > .sp-top{
+        transform: rotate(-135deg);
+        margin-top: 10px;
+    }
+    #click:checked ~ .toggle-icon > .sp-bot{
+        transform: rotate(135deg);
+        margin-top: -11px;
     }
     .service-box{
         width: 100%;
@@ -465,7 +530,7 @@ label{
         margin-top: 40px;
     }
     .counter-up{
-        padding: 40px 0px;
+        padding: 30px 0px;
     }
     .n-box{
         width: 50%;
@@ -481,19 +546,28 @@ label{
         display: block;
     }
     .form{
+        padding: 30px 0px;
+    }
+    .form1{
         width: 100%;
         float: none;
-        margin-bottom: 50px;
+        padding-left: 10px;
+    }
+    .form2{
+        width: 100%;
+        float: none;
+        padding-left: 10px;
     }
     .news{
+        padding: 30px 0px;
+        text-align: center;
+    }
+    .recent-news{
         width: 100%;
         float: none;
-    }
-    .recent-news p{
-        width: 90%;
         margin: auto;
-        text-align: justify;
-        margin: 15px 0px;
+        display: block;
+        margin-bottom: 30px;
     }
     .about{
         width: 100%;
