@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    font-family:ebrima;
+    font-family:tahoma;
 }
 html{
     scroll-behavior: smooth;
@@ -16,7 +16,7 @@ html{
     display: block;
 }
 header{
-    background: #30336b;
+    background: #FF2956;
     color: white; 
     position: sticky;
     left: 0;
@@ -50,15 +50,33 @@ header{
 }
 .menu li a{
     display:block;
-    padding: 15px 10px;
+    padding: 16px 12px;
     text-decoration: none;
-    color: rgb(233, 79, 52);
+    color: white;
     text-transform: uppercase;
     font-weight: bold;
+    position: relative;
+    z-index: 1;
+    margin-left: -4px;
 }
 .menu li a:hover{
-    background: #130f40;
+    color: #41454e;;
 }
+.menu li a:before{
+    position: absolute;
+    content: " ";
+    height: 0;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: white;
+    transition: 0.3s;
+    z-index: -1;
+}
+.menu li a:hover::before{
+    height: 100%;
+}
+
 #click{
     display: none;
 }
@@ -76,7 +94,7 @@ header{
     height: 3px;
     width: 75%;
     margin: auto;
-    background: #F79B10;
+    background:white;
     margin-top: 5px;
     transition: all 0.3s;
 } 
@@ -129,7 +147,7 @@ header{
     margin: auto;
     display: block;
     background: #30336b;
-    transform: translateY(4px);
+    transform: translateY(5px);
 }
 .service-box{
     float: left;
@@ -172,7 +190,7 @@ header{
     box-sizing: border-box;
     background: rgb(97, 1, 97);
     text-align: right;
-    color: #3490db;
+    color: cyan;
     animation: main1 2s;
 }
 .shadow .main2{
@@ -262,7 +280,6 @@ header{
 }
 .counter-up{
     width: 100%;
-    background: #EBF3F3;
     padding: 50px 0px;
 }
 .n-box{
@@ -328,12 +345,10 @@ label{
     font-weight: bold;
 }
 .submit{
-    width: 80px;
-    height: auto;
-    padding: 5px 0px;
+    padding: 10px 12px;
     text-align: center;
     display: inline-block;
-    border-radius: 10px;
+    border-radius: 5px;
     border: none;
     outline: none;
     font-size: 18px;
@@ -345,11 +360,9 @@ label{
     background: darkgreen;
 }
 .reset{
-    width: 80px;
-    height: auto;
-    padding: 5px 0px;
+    padding: 10px 12px;
     text-align: center;
-    border-radius: 10px;
+    border-radius: 5px;
     font-size: 18px;
     background: red;
     color: white;
@@ -388,9 +401,13 @@ label{
 }
 .recent-news a{
     text-decoration: none;
-    padding: 8px 12px;
+    padding: 10px 12px;
     background: tomato;
-    border-radius: 8px;
+    border-radius: 5px;
+    color: aliceblue;
+}
+.recent-news a:hover{
+    background: rgb(189, 32, 4);
 }
 .footer-bar{
     background: rgb(63, 62, 62);
@@ -474,7 +491,7 @@ label{
     .mobile-menu{
         display: none;
         position: fixed;
-        top: 51.5px;
+        top: 51px;
         left: 20px;
         width: 90%;
         height: auto;
@@ -492,7 +509,7 @@ label{
         font-size: 16px;
         display: block;   
         font-weight: 500;
-        padding: 10px 5px;
+        padding: 10px;
         text-decoration: none;
         color: #34e7e4;
     }
